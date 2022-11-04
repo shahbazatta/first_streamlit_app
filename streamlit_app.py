@@ -8,7 +8,7 @@ my_cur.execute("SELECT * from pc_rivery_db.public.fruit_load_list")
 my_data_rows = my_cur.fetchall()
 
 # Let's put a pick list here so they can pick the fruit they want to include 
-fruits_selected = streamlit.multiselect("What fruit whould you like information about?:", list(my_data_rows.index))
+fruits_selected = streamlit.multiselect("What fruit whould you like information about?:", list(my_data_rows))
 streamlit.header("Fruit load list contains:")
 #streamlit.text(my_data_rows)
 streamlit.dataframe(my_data_rows)
