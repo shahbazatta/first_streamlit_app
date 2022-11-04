@@ -5,9 +5,9 @@ import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
+#my_data_rows = my_cur.fetchall()
 streamlit.header("Fruit load list contains:")
-streamlit.text(my_data_rows)
+#streamlit.text(my_data_rows)
 
 streamlit.dataframe(my_data_row)
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
